@@ -62,7 +62,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
   }
   
   .resultado {
@@ -138,4 +138,66 @@ body {
   body.dark .toggle-tema {
     background: rgba(255,255,255,0.15);
   }
+
+  /* =========================
+   TIPOGRAFIA RESPONSIVA
+========================= */
+body {
+    font-size: 18px; /* maior para celular */
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  .numeros {
+    font-size: 24px; /* aumentar os números sorteados */
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: 4px;
+  }
+  
+  .resultado {
+    font-size: 20px; /* aumentar resultado do gerador */
+    font-weight: bold;
+    line-height: 1.8;
+  }
+  
+  button {
+    font-size: 18px; /* botões maiores e mais fáceis de tocar */
+    padding: 14px 20px;
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      margin: 15px;
+      padding: 20px;
+    }
+  
+    .numeros {
+      font-size: 28px;
+    }
+  
+    .resultado {
+      font-size: 22px;
+    }
+  
+    button {
+      font-size: 20px;
+      padding: 16px 24px;
+    }
+  }
+  .numeros span {
+    display: inline-block;
+    margin: 0 4px;
+  }
+  
   

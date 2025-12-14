@@ -16,8 +16,7 @@ function formatCurrency(valor) {
       <p><b>Data:</b> ${data.data}</p>
       <p><b>Prêmio:</b> ${formatCurrency(data.valorEstimadoProximoConcurso)}</p>
       <p>${resultadoTexto(data.acumulou)}</p>
-      <div class="numeros">${data.dezenas.join(" - ")}</div>
-    `;
+      <div class="numeros">${data.dezenas.map(n => `<span>${n.toString().padStart(2,'0')}</span>`).join('')}</div>    `;
   }
   
   async function carregar() {
