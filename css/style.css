@@ -1,0 +1,141 @@
+/* =========================
+   BASE
+========================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f2f4f8;
+    color: #333;
+    text-align: center;
+    transition: background .3s, color .3s;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #1e90ff, #0066cc);
+    color: white;
+    padding: 20px;
+    position: relative;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /* =========================
+     BOTÃO TEMA
+  ========================= */
+  .toggle-tema {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .toggle-tema:hover {
+    background: rgba(255,255,255,0.35);
+  }
+  
+  /* =========================
+     CARDS
+  ========================= */
+  .card {
+    background: white;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    transition: background .3s, box-shadow .3s;
+  }
+  
+  .numeros {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .resultado {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.8;
+  }
+  
+  /* =========================
+     BOTÕES
+  ========================= */
+  button {
+    padding: 12px 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #1e90ff;
+    color: white;
+    transition: background .2s;
+  }
+  
+  button:hover {
+    background: #0066cc;
+  }
+  
+  button.danger {
+    background: #c0392b;
+  }
+  
+  /* =========================
+     AÇÕES / LOADING
+  ========================= */
+  .acoes {
+    margin-top: 20px;
+  }
+  
+  .loading {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* =========================
+     🌙 TEMA ESCURO
+  ========================= */
+  body.dark {
+    background: #121212;
+    color: #e5e5e5;
+  }
+  
+  body.dark header {
+    background: linear-gradient(135deg, #111827, #1f2933);
+  }
+  
+  body.dark .card {
+    background: #1e1e1e;
+    box-shadow: 0 10px 25px rgba(0,0,0,.6);
+  }
+  
+  body.dark button {
+    background: #4f46e5;
+  }
+  
+  body.dark button:hover {
+    background: #4338ca;
+  }
+  
+  body.dark .toggle-tema {
+    background: rgba(255,255,255,0.15);
+  }
+  

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Últimos Sorteios</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e90ff">
+
+</head>
+<body>
+
+    <header class="header">
+        <h1>🎰 Últimos Sorteios</h1>
+      
+        <button 
+          id="toggleTema" 
+          class="toggle-tema" 
+          title="Alternar tema"
+          aria-label="Alternar tema">
+          🌙
+        </button>
+      </header>
+      
+      
+
+  <div id="loading" class="loading">
+    ⏳ Carregando dados...
+  </div>
+
+  <main id="conteudo" class="hidden">
+    <div class="card" id="mega"></div>
+    <div class="card" id="loto"></div>
+
+    <div class="acoes">
+      <button onclick="irParaGerador()">🎯 Gerador de Números</button>
+      <button onclick="irParaHistorico()">📜 Histórico</button>
+      <button onclick="window.location.href='graficos.html'">📊 Gráficos</button>
+      <button onclick="window.location.href='conferencia.html'">🔄 Conferencias</button>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js")
+          .then(reg => console.log("SW registrado:", reg))
+          .catch(err => console.log("SW falhou:", err));
+      });
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "name": "Gerador De Loterias",
+    "short_name": "Loterias",
+    "description": "Conferir resultados, gerar números e visualizar histórico de loterias.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#f2f4f8",
+    "theme_color": "#1e90ff",
+    "icons": [
+      {
+        "src": "icons/icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

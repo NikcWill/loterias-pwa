@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>📊 Gráficos de Frequência</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e90ff">
+
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>📊 Frequência dos Números</h1>
+  <button 
+          id="toggleTema" 
+          class="toggle-tema" 
+          title="Alternar tema"
+          aria-label="Alternar tema">
+          🌙
+        </button>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Mega-Sena</h2>
+    <canvas id="graficoMega"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>Lotofácil</h2>
+    <canvas id="graficoLoto"></canvas>
+  </div>
+
+  <div class="acoes">
+    <button onclick="voltar()">⬅ Voltar</button>
+  </div>
+</main>
+
+<script src="js/app.js"></script>
+<script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js")
+          .then(reg => console.log("SW registrado:", reg))
+          .catch(err => console.log("SW falhou:", err));
+      });
+    }
+  </script>
+  
+</body>
+</html>
